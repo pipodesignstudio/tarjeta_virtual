@@ -16,6 +16,7 @@ class TarjetaSanitariaApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: Flurorouter.rootRoute,
       onGenerateRoute: Flurorouter.router.generator,
+      theme: ThemeData(scaffoldBackgroundColor: Colors.white),
     );
   }
 }
