@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tarjeta_sanitaria/services/navigator_service.dart';
 import 'package:tarjeta_sanitaria/style/custom_colors.dart';
@@ -40,6 +41,8 @@ class SmsActivation1 extends StatelessWidget {
             ),
             TextFormField(
               keyboardType: TextInputType.number,
+              maxLength: 10,
+              inputFormatters: [FilteringTextInputFormatter.digitsOnly],
             ),
             const SizedBox(
               height: 20,
