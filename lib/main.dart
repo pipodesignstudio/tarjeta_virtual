@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tarjeta_sanitaria/routes/routes.dart';
+import 'package:tarjeta_sanitaria/services/navigator_service.dart';
 
 void main() async {
   Flurorouter.configureRoutes();
@@ -15,6 +16,7 @@ class TarjetaSanitariaApp extends StatelessWidget {
       title: 'Tarjeta Sanitaria Virtual',
       debugShowCheckedModeBanner: false,
       initialRoute: Flurorouter.rootRoute,
+      navigatorKey: NavigatorService.navigatorKey,
       onGenerateRoute: Flurorouter.router.generator,
       theme: ThemeData(scaffoldBackgroundColor: Colors.white),
     );

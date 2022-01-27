@@ -18,7 +18,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=2.15.0 <3.0.0"
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -27,12 +27,15 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  adaptive_dialog: ^1.3.0
   cupertino_icons: ^1.0.2
   fluro: ^2.0.3
   flutter:
     sdk: flutter
   flutter_bounce: ^1.1.0
   google_fonts: ^2.2.0
+  iconsax: ^0.0.8
+  pinput: ^1.2.2
 
 dev_dependencies:
   flutter_lints: ^1.0.0

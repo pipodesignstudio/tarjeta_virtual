@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bounce/flutter_bounce.dart';
+import 'package:tarjeta_sanitaria/routes/routes.dart';
 import 'package:tarjeta_sanitaria/style/custom_colors.dart';
 import 'package:tarjeta_sanitaria/style/custom_text_style.dart';
+import 'package:iconsax/iconsax.dart';
 
 class ActivationScreen extends StatelessWidget {
   const ActivationScreen({Key? key}) : super(key: key);
@@ -140,7 +142,11 @@ class _ChooseActivationState extends State<ChooseActivation> {
         ),
         Expanded(child: Container()),
         MaterialButton(
-          onPressed: () {},
+          onPressed: () {
+            if (selectedMethod == 1) {
+              Navigator.pushNamed(context, Flurorouter.smsActivation1);
+            }
+          },
           height: 50,
           color: CustomColors.accent,
           child: Row(
@@ -151,7 +157,13 @@ class _ChooseActivationState extends State<ChooseActivation> {
                 selectedMethod == 0 ? 'Abrir escáner QR' : 'Siguiente',
                 style: const TextStyle(color: Colors.white, fontSize: 16.0),
               ),
-              Icon(Icons.arrow_back)
+              const SizedBox(
+                width: 5,
+              ),
+              const Icon(
+                Iconsax.arrow_right_1,
+                color: Colors.white,
+              )
             ],
           ),
           padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 50),
