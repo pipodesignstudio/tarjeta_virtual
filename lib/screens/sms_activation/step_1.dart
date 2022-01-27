@@ -38,10 +38,14 @@ class SmsActivation1 extends StatelessWidget {
               'Paso 1: Introduce tu CIPA',
               style: CustomTextStyle.h1,
             ),
-            Center(
-              child: TextFormField(
-                keyboardType: TextInputType.number,
-              ),
+            TextFormField(
+              keyboardType: TextInputType.number,
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Row(
+              children: [],
             )
           ],
         ),
