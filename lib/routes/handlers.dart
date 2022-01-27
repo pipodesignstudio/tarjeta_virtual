@@ -5,4 +5,8 @@ class Handlers {
   static Handler splash = Handler(handlerFunc: (context, __) {
     return const SplashScreen();
   });
+
+  static Handler activation = Handler(handlerFunc: (context, __) {
+    return const ActivationScreen();
+  });
 }

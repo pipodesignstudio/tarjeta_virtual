@@ -1,17 +1,33 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tarjeta_sanitaria/routes/routes.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    Future.delayed(const Duration(milliseconds: 1200), () {
+      Navigator.popAndPushNamed(context, Flurorouter.activationRoute);
+    });
+
     return Scaffold(
       body: SizedBox(
         height: double.infinity,
         width: double.infinity,
         child: Stack(
-          children: [const _LogoImage()],
+          children: [
+            Positioned(
+                top: -150,
+                left: -120,
+                child: Image.asset('assets/img/bubble-2.png')),
+            Positioned(
+              bottom: -100,
+              right: -80,
+              child: Image.asset('assets/img/bubble-2.png'),
+            ),
+            const _LogoImage()
+          ],
         ),
       ),
     );
@@ -40,32 +56,6 @@ class _LogoImage extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-}
-
-class _SplashBubble extends StatelessWidget {
-  _SplashBubble(
-      {required this.bubble,
-      required this.bottom,
-      required this.left,
-      required this.right,
-      required this.top});
-
-  String bubble;
-  double bottom;
-  double left;
-  double right;
-  double top;
-
-  @override
-  Widget build(BuildContext context) {
-    return Positioned(
-      top: top,
-      bottom: bottom,
-      left: left,
-      right: right,
-      child: Image.asset('assets/img/$bubble'),
     );
   }
 }
