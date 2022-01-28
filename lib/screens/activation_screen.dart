@@ -149,23 +149,10 @@ class _ChooseActivationState extends State<ChooseActivation> {
           },
           height: 50,
           color: CustomColors.accent,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text(
+          child: Text(
                 selectedMethod == 0 ? 'Abrir escáner QR' : 'Siguiente',
                 style: const TextStyle(color: Colors.white, fontSize: 16.0),
               ),
-              const SizedBox(
-                width: 5,
-              ),
-              const Icon(
-                Iconsax.arrow_right_1,
-                color: Colors.white,
-              )
-            ],
-          ),
           padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 50),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(5.0),
@@ -173,7 +160,7 @@ class _ChooseActivationState extends State<ChooseActivation> {
         ),
         const SizedBox(
           height: 15,
-        )
+        ),
       ],
     );
   }
