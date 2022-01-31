@@ -6,7 +6,6 @@ import 'package:tarjeta_sanitaria/services/navigator_service.dart';
 import 'package:tarjeta_sanitaria/style/custom_colors.dart';
 import 'package:tarjeta_sanitaria/style/custom_text_style.dart';
 import 'package:tarjeta_sanitaria/style/input_style.dart';
-import 'package:adaptive_dialog/adaptive_dialog.dart';
 
 class SmsActivation1 extends StatelessWidget {
   const SmsActivation1({Key? key}) : super(key: key);
